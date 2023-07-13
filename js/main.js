@@ -824,4 +824,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   refreshFn()
   unRefreshFn()
+  new Valine({
+    el: '#vcomments',
+    appId: 'hXFR2i5TdJbcGB0m5J0viug2-gzGzoHsz',
+    appKey: 'IYuB14XPoTJqGfhG6vR63E3D',
+  })
+  
 })
