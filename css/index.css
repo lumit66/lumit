@@ -6337,8 +6337,8 @@ blockquote.pullquote.right {
   line-height: 24px;
 }
 #algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--selected a {
-  background: #49b1f5;
-  color: #49b1f5;
+  background: var(--leonus-purple);
+  color: #eee;
   cursor: default;
   border-radius: 5px;
 }
