@@ -6209,97 +6209,21 @@ blockquote.pullquote.right {
   display: none;
   background: rgba(0,0,0,0.6);
 }
-#algolia-search hr {
-  display: none;
-}
-#algolia-search .search-nav {
-  height: 40px;
-  margin: 0;
-}
-@media screen and (max-width: 768px) {
-  #algolia-search .search-dialog {
-    border: none;
-    border-radius: 0;
-  }
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form {
-  height: 35px;
+#algolia-search .search-dialog .ais-SearchBox input {
+  padding: 5px 14px;
   width: 100%;
-  overflow: hidden;
-  margin-bottom: 10px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form input {
-  padding: 0 14px;
-  height: 100%;
-  width: calc(100% - 50px);
   outline: none;
   border: 2px solid #49b1f5;
-  border-right: 0;
-  border-radius: 40px 0 0 40px;
-  background: transparent;
+  border-radius: 40px;
+  background: var(--search-bg);
   color: var(--search-input-color);
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -o-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 100%;
-  width: 50px;
-  border: 2px solid #49b1f5;
-  border-left: 0;
-  border-radius: 0 40px 40px 0;
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit svg {
-  width: 50%;
-  height: 50%;
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit svg path {
-  fill: var(--search-input-color);
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit:hover svg path {
-  fill: var(--leonus-purple);
-}
-#algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form span.ais-SearchBox-loadingIndicator {
-  position: absolute;
-  left: 50%;
-  top: 93px;
-  -webkit-transform: translate(-50%);
-  -moz-transform: translate(-50%);
-  -o-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  transform: translate(-50%);
 }
 #algolia-search .search-dialog .ais-Hits-list {
   margin: 0;
   padding: 0;
 }
 #algolia-search .search-dialog .ais-Hits-list a {
-  color: var(--search-result-title);
-  font-weight: bold;
+  color: var(--search-a-color);
 }
 #algolia-search .search-dialog .ais-Hits-list a:hover {
   color: #49b1f5;
@@ -6309,13 +6233,15 @@ blockquote.pullquote.right {
   color: #f47466;
   font-weight: bold;
 }
+#algolia-search .search-dialog .algolia-hits-item-title {
+  font-weight: 600;
+}
 #algolia-search .search-dialog .algolia-hit-item-content {
-  margin: 0 0 5px;
-  word-break: break-all;
+  margin: 0 0 8px;
+  word-break: break-word;
 }
 #algolia-search .search-dialog .ais-Pagination {
-  margin: 10px 0;
-  height: 35px;
+  margin: 15px 0 0;
   padding: 0;
   text-align: center;
 }
@@ -6337,97 +6263,32 @@ blockquote.pullquote.right {
   line-height: 24px;
 }
 #algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--selected a {
-  background: var(--leonus-purple);
+  background: #00c4b6;
   color: #eee;
   cursor: default;
-  border-radius: 5px;
 }
 #algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--disabled {
   visibility: hidden;
 }
-#algolia-search .search-dialog .algolia-logo {
-  padding-top: 2px;
-  width: 80px;
-  height: 30px;
-}
 #algolia-search .search-dialog #algolia-hits > div {
   overflow-y: scroll;
-}
-@media screen and (min-width: 768px) {
-  #algolia-search .search-dialog #algolia-hits > div {
-    max-height: calc(80vh - 240px);
-  }
+  margin: 0 -20px;
+  padding: 0 22px;
+  max-height: calc(80vh - 240px);
 }
 @media screen and (max-width: 768px) {
   #algolia-search .search-dialog #algolia-hits > div {
-    max-height: calc(100vh - 260px);
-    max-height: calc(100dvh - 200px);
+    max-height: none;
+    height: calc(var(--search-height) - 265px);
   }
 }
-#algolia-search .search-dialog #algolia-info {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  height: 30px;
-}
-#algolia-search .search-dialog #algolia-info .algolia-stats {
-  font-size: 14px;
+#algolia-search .search-dialog #algolia-info div {
+  display: inline;
 }
 #algolia-search .search-dialog #algolia-info .algolia-poweredBy {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: right;
-  -moz-box-pack: right;
-  -o-box-pack: right;
-  -ms-flex-pack: right;
-  -webkit-justify-content: right;
-  justify-content: right;
-  width: 90px;
-  overflow: hidden;
+  float: right;
+  vertical-align: text-top;
 }
-#algolia-search .search-dialog #algolia-info .algolia-poweredBy .ais-PoweredBy a {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-#algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:first-child {
-  display: none;
-}
-#algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(2),
-#algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(4) {
-  fill: var(--leonus-purple);
+#algolia-search .search-dialog #algolia-info .algolia-poweredBy svg {
+  height: 1.1em;
 }
