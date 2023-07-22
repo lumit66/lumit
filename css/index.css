@@ -6338,7 +6338,7 @@ blockquote.pullquote.right {
 }
 #algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--selected a {
   background: var(--leonus-purple);
-  color: #06f;
+  color: #eee;
   cursor: default;
   border-radius: 5px;
 }
@@ -6389,12 +6389,7 @@ blockquote.pullquote.right {
   font-size: 14px;
 }
 #algolia-search .search-dialog #algolia-info .algolia-poweredBy {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
+  display: none !important;
   -webkit-box-pack: right;
   -moz-box-pack: right;
   -o-box-pack: right;
