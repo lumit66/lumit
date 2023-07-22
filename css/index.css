@@ -6389,7 +6389,12 @@ blockquote.pullquote.right {
   font-size: 14px;
 }
 #algolia-search .search-dialog #algolia-info .algolia-poweredBy {
-  display: none !important;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
   -webkit-box-pack: right;
   -moz-box-pack: right;
   -o-box-pack: right;
