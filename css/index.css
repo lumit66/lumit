@@ -6338,7 +6338,7 @@ blockquote.pullquote.right {
 }
 #algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--selected a {
   background: var(--leonus-purple);
-  color: #eee;
+  color: #06f;
   cursor: default;
   border-radius: 5px;
 }
