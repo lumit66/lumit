@@ -6429,5 +6429,5 @@ blockquote.pullquote.right {
 }
 #algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(2),
 #algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(4) {
-  fill: var(--leonus-purple);
+  fill: #49b1f5;
 }
