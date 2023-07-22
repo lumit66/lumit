@@ -6269,7 +6269,7 @@ blockquote.pullquote.right {
   justify-content: center;
   height: 100%;
   width: 50px;
-  border: 2px solid #06f;
+  border: 2px solid #49b1f5;
   border-left: 0;
   border-radius: 0 40px 40px 0;
 }
@@ -6281,7 +6281,7 @@ blockquote.pullquote.right {
   fill: var(--search-input-color);
 }
 #algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form button.ais-SearchBox-submit:hover svg path {
-  fill: #06f;
+  fill: #49b1f5;
 }
 #algolia-search .search-dialog .ais-SearchBox .ais-SearchBox-form span.ais-SearchBox-loadingIndicator {
   position: absolute;
@@ -6337,8 +6337,8 @@ blockquote.pullquote.right {
   line-height: 24px;
 }
 #algolia-search .search-dialog .ais-Pagination .ais-Pagination-item--selected a {
-  background: #06f;
-  color: #06f;
+  background: #49b1f5;
+  color: #49b1f5;
   cursor: default;
   border-radius: 5px;
 }
@@ -6429,5 +6429,5 @@ blockquote.pullquote.right {
 }
 #algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(2),
 #algolia-search .search-dialog #algolia-info .ais-PoweredBy-logo path:nth-child(4) {
-  fill: #06f;
+  fill: #49b1f5;
 }
