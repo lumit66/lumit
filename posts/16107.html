@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-
       appId: '4zzFfPr2BOYs8evw1G9mOmas-MdYXbMMI',
       appKey: 'P8iAH1VNoDwR2nstQZbP42sm',
       avatar: 'monsterid',
-      serverURLs: 'https://lumit.top',
+      serverURLs: 'https://api.lumit.top',
       emojiMaps: "",
       master: 'e3d83e7980a595132f8f0f51986cc291',   //博主邮箱md5加密32位小写
       tagMeta: ["博主","小伙伴","访客"],     //标识字段名
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-
   }
 
   if (typeof Valine === 'function') initValine() 
-  else getScript('/js/Valine.min.js').then(initValine)
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
 }
 
 if ('Valine' === 'Valine' || !false) {
