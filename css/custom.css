@@ -1,0 +1,6 @@
+/* 字体样式 */
+@font-face {
+    font-family: 'ziti';
+    font-display: swap;
+    src: url('/fonts/MaoKenZhuYuanTi.ttf') format("truetype");
+}
