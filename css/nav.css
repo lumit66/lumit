@@ -17,9 +17,6 @@
 	opacity: 0;
 	box-shadow: 0 0 3px var(--lyx-theme);
 	/*如果垂直位置不居中可以微调此值，也可以删了*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #page-name:hover:before {
