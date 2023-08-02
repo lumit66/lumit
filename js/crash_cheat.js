@@ -3,7 +3,7 @@
  document.addEventListener('visibilitychange', function () {
      if (document.hidden) {
          $('[rel="icon"]').attr('href', "/joke.ico");
-         document.title = '看不见我🙈~看不见我🙈~';
+         document.title = '看不见我⌀(*/ω＼*)~~';
          clearTimeout(titleTime);
      }
      else {
