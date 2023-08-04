@@ -4511,7 +4511,19 @@ h1.page-title + .tag-cloud-list {
   z-index: 100;
   display: none;
   padding: 0 0 15px;
-  width: 150%;
+  width: 200%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex; /* 添加这行，使用 flexbox 布局 */
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; /* 将子元素在主轴上均匀分布，实现左右对齐 */
 }
 .post-reward .reward-button .reward-main .reward-all {
   display: inline-block;
@@ -4542,7 +4554,6 @@ h1.page-title + .tag-cloud-list {
   content: '';
 }
 .post-reward .reward-button .reward-main .reward-all .reward-item {
-  display: inline-block;
   padding: 0 8px;
   list-style-type: none;
   vertical-align: top;
