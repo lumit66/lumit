@@ -4482,7 +4482,7 @@ h1.page-title + .tag-cloud-list {
 .post-reward {
   position: relative;
   margin-top: 4rem;
-  width: 100%;
+  width: 200%;
   text-align: center;
 }
 .post-reward .reward-button {
@@ -4511,7 +4511,7 @@ h1.page-title + .tag-cloud-list {
   z-index: 100;
   display: none;
   padding: 0 0 15px;
-  width: 200%;
+  width: 150%;
 }
 .post-reward .reward-button .reward-main .reward-all {
   display: inline-block;
