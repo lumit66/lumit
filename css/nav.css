@@ -1,3 +1,4 @@
+/*导航栏居中显示*/
 #nav-right{
 	flex:1 1 auto;
 	justify-content: flex-end;
@@ -5,7 +6,8 @@
 	display: flex;
 	flex-wrap:nowrap;
   }
-   
+ 
+/*导航栏常驻*/  
 .nav-fixed #nav{
     transform: translateY(58px)!important;
     -webkit-transform: translateY(58px)!important;
