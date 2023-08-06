@@ -7,7 +7,6 @@
     white-space: nowrap;
     overflow: hidden;
     margin-bottom: 1rem;
-    margin-left: 20px; /* 调整此值来实现向右延伸 */
     border: var(--style-border);
   }
   
@@ -37,7 +36,7 @@
   
   .category-bar-items{
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
     display: flex;
   }
   
