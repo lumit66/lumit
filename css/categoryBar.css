@@ -6,7 +6,8 @@
     display: flex;
     white-space: nowrap;
     overflow: hidden;
-    margin: 0.5rem;
+    /*margin-bottom: 1rem;*/
+    margin: 0.5rem 0.5rem 20rem 20px; /* 仅修改左外边距为 20px */
     border: var(--style-border);
   }
   
@@ -67,12 +68,4 @@
   .category-bar-more{
     margin-left: 1rem;
     font-weight: bold;
-  }
-  
-  #article-container .flink .flink-list {
-  text-align: left!important;
-  }
-  
-  .flink-item-name, .flink-item-desc {
-  color: white!important;
   }

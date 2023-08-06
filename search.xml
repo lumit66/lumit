@@ -38,10 +38,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <link href="/css/categoryBar.css"/>
+      <url>/css/categoryBar.css</url>
       
-        <content type="html"><![CDATA[/* 字体样式 */@font-face {    font-family: 'ziti';    font-display: swap;    src: url('/fonts/MaoKenZhuYuanTi.ttf') format("truetype");}]]></content>
+        <content type="html"><![CDATA[/* 首页分类条展示 */#category-bar{    padding: 0.4rem 1rem 0.4rem 0.5rem;    background: var(--heo-card-bg);    border-radius: 12px;    display: flex;    white-space: nowrap;    overflow: hidden;    /*margin-bottom: 1rem;*/    margin: 0.5rem 0.5rem 20rem 20px; /* 仅修改左外边距为 20px */    border: var(--style-border);  }    @media screen and (max-width: 768px){    #category-bar{      border-radius: 0;    }  }    #category #category-bar{    padding: 0;    border: none;  }    #category a.category-bar-item.select a{    display: none;  }    .category-in-bar{    display: flex;    white-space: nowrap;  }    .category-in-bar-tips{    margin-right: 1rem;  }    .category-bar-items{    white-space: nowrap;    overflow-x: scroll;    display: flex;  }        .category-bar-items::-webkit-scrollbar{    display: none;  }    .category-bar-item a{    padding: 0.1rem 0.5rem;    margin: 0 0.25rem;    font-weight: bold;    border-radius: 12px;  }    .category-bar-item:hover a{    background: var(--heo-main);    color: var(--heo-white);  }    .category-bar-item.select a {    background: var(--heo-main);    color: var(--heo-white);    border-radius: 12px;  }    .category-bar-more{    margin-left: 1rem;    font-weight: bold;  }]]></content>
       
     </entry>
     
@@ -49,10 +49,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/categoryBar.css"/>
-      <url>/css/categoryBar.css</url>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[/* 首页分类条展示 */#category-bar{    padding: 0.4rem 1rem 0.4rem 0.5rem;    background: var(--heo-card-bg);    border-radius: 12px;    display: flex;    white-space: nowrap;    overflow: hidden;    margin: 0.5rem;    border: var(--style-border);  }    @media screen and (max-width: 768px){    #category-bar{      border-radius: 0;    }  }    #category #category-bar{    padding: 0;    border: none;  }    #category a.category-bar-item.select a{    display: none;  }    .category-in-bar{    display: flex;    white-space: nowrap;  }    .category-in-bar-tips{    margin-right: 1rem;  }    .category-bar-items{    white-space: nowrap;    overflow-x: scroll;    display: flex;  }        .category-bar-items::-webkit-scrollbar{    display: none;  }    .category-bar-item a{    padding: 0.1rem 0.5rem;    margin: 0 0.25rem;    font-weight: bold;    border-radius: 12px;  }    .category-bar-item:hover a{    background: var(--heo-main);    color: var(--heo-white);  }    .category-bar-item.select a {    background: var(--heo-main);    color: var(--heo-white);    border-radius: 12px;  }    .category-bar-more{    margin-left: 1rem;    font-weight: bold;  }    #article-container .flink .flink-list {  text-align: left!important;  }    .flink-item-name, .flink-item-desc {  color: white!important;  }]]></content>
+        <content type="html"><![CDATA[/* 字体样式 */@font-face {    font-family: 'ziti';    font-display: swap;    src: url('/fonts/MaoKenZhuYuanTi.ttf') format("truetype");}]]></content>
       
     </entry>
     
@@ -103,22 +103,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/js/nav.js"/>
-      <url>/js/nav.js</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[document.getElementById("name-container").setAttribute("style", "display:none");var position = $(window).scrollTop();$(window).scroll(function () {  var scroll = $(window).scrollTop();  if (scroll > position) {    document.getElementById("name-container").setAttribute("style", "");    document.getElementsByClassName("menus_items")[1].setAttribute("style", "display:none!important");  } else {    document.getElementsByClassName("menus_items")[1].setAttribute("style", "");    document.getElementById("name-container").setAttribute("style", "display:none");  }  position = scroll;});function scrollToTop(){    document.getElementsByClassName("menus_items")[1].setAttribute("style","");    document.getElementById("name-container").setAttribute("style","display:none");    btf.scrollToDest(0, 500);}document.getElementById("page-name").innerText = document.title.split(" |")[0];]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/js/nav.js"/>
+      <url>/js/nav.js</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[document.getElementById("name-container").setAttribute("style", "display:none");var position = $(window).scrollTop();$(window).scroll(function () {  var scroll = $(window).scrollTop();  if (scroll > position) {    document.getElementById("name-container").setAttribute("style", "");    document.getElementsByClassName("menus_items")[1].setAttribute("style", "display:none!important");  } else {    document.getElementsByClassName("menus_items")[1].setAttribute("style", "");    document.getElementById("name-container").setAttribute("style", "display:none");  }  position = scroll;});function scrollToTop(){    document.getElementsByClassName("menus_items")[1].setAttribute("style","");    document.getElementById("name-container").setAttribute("style","display:none");    btf.scrollToDest(0, 500);}document.getElementById("page-name").innerText = document.title.split(" |")[0];]]></content>
       
     </entry>
     
