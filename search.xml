@@ -27,28 +27,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/categoryBar.css"/>
-      <url>/css/categoryBar.css</url>
-      
-        <content type="html"><![CDATA[/* 首页分类条展示 */#category-bar{    padding: 0.4rem 1rem 0.4rem 0.5rem;    background: var(--heo-card-bg);    border-radius: 12px;    display: flex;    white-space: nowrap;    overflow: hidden;    margin-bottom: 1rem;    border: var(--style-border);  }    @media screen and (max-width: 768px){    #category-bar{      border-radius: 0;    }  }    #category #category-bar{    padding: 0;    border: none;  }    #category a.category-bar-item.select a{    display: none;  }    .category-in-bar{    display: flex;    white-space: nowrap;  }    .category-in-bar-tips{    margin-right: 1rem;  }    .category-bar-items{    white-space: nowrap;    overflow-x: scroll;    display: flex;  }        .category-bar-items::-webkit-scrollbar{    display: none;  }    .category-bar-item a{    padding: 0.1rem 0.5rem;    margin: 0 0.25rem;    font-weight: bold;    border-radius: 12px;  }    .category-bar-item:hover a{    background: var(--heo-main);    color: var(--heo-white);  }    .category-bar-item.select a {    background: var(--heo-main);    color: var(--heo-white);    border-radius: 12px;  }    .category-bar-more{    margin-left: 1rem;    font-weight: bold;  }]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/nav.css"/>
       <url>/css/nav.css</url>
       
@@ -60,10 +38,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/categoryBar.js"/>
-      <url>/js/categoryBar.js</url>
+      <link href="/css/categoryBar.css"/>
+      <url>/css/categoryBar.css</url>
       
-        <content type="html"><![CDATA[categoriesBarActive()topCategoriesBarScroll()//分类条function categoriesBarActive(){  var urlinfo = window.location.pathname;  urlinfo = decodeURIComponent(urlinfo)  console.log(urlinfo);  //判断是否是首页  if (urlinfo == '/'){    if (document.querySelector('#category-bar')){      document.getElementById('首页').classList.add("select")    }  }else {    // 验证是否是分类链接    var pattern = /\/categories\/.*?\//;    var patbool = pattern.test(urlinfo);    console.log(patbool);    // 获取当前的分类    if (patbool) {      var valuegroup = urlinfo.split("/");      console.log(valuegroup[2]);      // 获取当前分类      var nowCategorie = valuegroup[2];      if (document.querySelector('#category-bar')){        document.getElementById(nowCategorie).classList.add("select");      }    }  }  }//鼠标控制横向滚动function topCategoriesBarScroll(){  if (document.getElementById("category-bar-items")){    let xscroll = document.getElementById("category-bar-items");  xscroll.addEventListener("mousewheel", function (e) {    //计算鼠标滚轮滚动的距离    let v = -e.wheelDelta / 2;    xscroll.scrollLeft += v;    //阻止浏览器默认方法    e.preventDefault();}, false);  }}]]></content>
+        <content type="html"><![CDATA[/* 首页分类条展示 */#category-bar{    padding: 0.4rem 1rem 0.4rem 0.5rem;    background: var(--heo-card-bg);    border-radius: 12px;    display: flex;    white-space: nowrap;    overflow: hidden;    margin-bottom: 1rem;    border: var(--style-border);  }    @media screen and (max-width: 768px){    #category-bar{      border-radius: 0;    }  }    #category #category-bar{    padding: 0;    border: none;  }    #category a.category-bar-item.select a{    display: none;  }    .category-in-bar{    display: flex;    white-space: nowrap;  }    .category-in-bar-tips{    margin-right: 1rem;  }    .category-bar-items{    white-space: nowrap;    overflow-x: scroll;    display: flex;  }        .category-bar-items::-webkit-scrollbar{    display: none;  }    .category-bar-item a{    padding: 0.1rem 0.5rem;    margin: 0 0.25rem;    font-weight: bold;    border-radius: 12px;  }    .category-bar-item:hover a{    background: var(--heo-main);    color: var(--heo-white);  }    .category-bar-item.select a {    background: var(--heo-main);    color: var(--heo-white);    border-radius: 12px;  }    .category-bar-more{    margin-left: 1rem;    font-weight: bold;  }]]></content>
       
     </entry>
     
@@ -82,6 +60,28 @@
     
     <entry>
       <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
+      
+        <content type="html"><![CDATA[/* 字体样式 */@font-face {    font-family: 'ziti';    font-display: swap;    src: url('/fonts/MaoKenZhuYuanTi.ttf') format("truetype");}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/js/nav.js"/>
       <url>/js/nav.js</url>
       
@@ -93,10 +93,21 @@
     
     <entry>
       <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <link href="/js/categoryBar.js"/>
+      <url>/js/categoryBar.js</url>
       
-        <content type="html"><![CDATA[/* 字体样式 */@font-face {    font-family: 'ziti';    font-display: swap;    src: url('/fonts/MaoKenZhuYuanTi.ttf') format("truetype");}]]></content>
+        <content type="html"><![CDATA[categoriesBarActive()topCategoriesBarScroll()//分类条function categoriesBarActive(){  var urlinfo = window.location.pathname;  urlinfo = decodeURIComponent(urlinfo)  console.log(urlinfo);  //判断是否是首页  if (urlinfo == '/'){    if (document.querySelector('#category-bar')){      document.getElementById('首页').classList.add("select")    }  }else {    // 验证是否是分类链接    var pattern = /\/categories\/.*?\//;    var patbool = pattern.test(urlinfo);    console.log(patbool);    // 获取当前的分类    if (patbool) {      var valuegroup = urlinfo.split("/");      console.log(valuegroup[2]);      // 获取当前分类      var nowCategorie = valuegroup[2];      if (document.querySelector('#category-bar')){        document.getElementById(nowCategorie).classList.add("select");      }    }  }  }//鼠标控制横向滚动function topCategoriesBarScroll(){  if (document.getElementById("category-bar-items")){    let xscroll = document.getElementById("category-bar-items");  xscroll.addEventListener("mousewheel", function (e) {    //计算鼠标滚轮滚动的距离    let v = -e.wheelDelta / 2;    xscroll.scrollLeft += v;    //阻止浏览器默认方法    e.preventDefault();}, false);  }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -119,17 +130,6 @@
       <url>/js/coin/coin.js</url>
       
         <content type="html"><![CDATA[var tipButtons = document.querySelectorAll(".tip-button");function coinAudio() {  var coinAudio = document.getElementById("coinAudio");  if (coinAudio) {    coinAudio.play(); //有音频时播放  }}// Loop through all buttons (allows for multiple buttons on page)tipButtons.forEach(button => {  var coin = button.querySelector(".coin");  // The larger the number, the slower the animation  coin.maxMoveLoopCount = 90;  button.addEventListener("click", () => {    if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true; //媒体选择    if (button.clicked) return;    button.classList.add("clicked");    // Wait to start flipping th coin because of the button tilt animation    setTimeout(() => {      // Randomize the flipping speeds just for fun      coin.sideRotationCount = Math.floor(Math.random() * 5) * 90;      coin.maxFlipAngle = (Math.floor(Math.random() * 4) + 3) * Math.PI;      button.clicked = true;      flipCoin();      coinAudio();    }, 50);  });  var flipCoin = () => {    coin.moveLoopCount = 0;    flipCoinLoop();  };  var resetCoin = () => {    coin.style.setProperty("--coin-x-multiplier", 0);    coin.style.setProperty("--coin-scale-multiplier", 0);    coin.style.setProperty("--coin-rotation-multiplier", 0);    coin.style.setProperty("--shine-opacity-multiplier", 0.4);    coin.style.setProperty("--shine-bg-multiplier", "50%");    coin.style.setProperty("opacity", 1);    // Delay to give the reset animation some time before you can click again    setTimeout(() => {      button.clicked = false;    }, 300);  };  var flipCoinLoop = () => {    coin.moveLoopCount++;    var percentageCompleted = coin.moveLoopCount / coin.maxMoveLoopCount;    coin.angle = -coin.maxFlipAngle * Math.pow(percentageCompleted - 1, 2) + coin.maxFlipAngle;    // Calculate the scale and position of the coin moving through the air    coin.style.setProperty("--coin-y-multiplier", -11 * Math.pow(percentageCompleted * 2 - 1, 4) + 11);    coin.style.setProperty("--coin-x-multiplier", percentageCompleted);    coin.style.setProperty("--coin-scale-multiplier", percentageCompleted * 0.6);    coin.style.setProperty("--coin-rotation-multiplier", percentageCompleted * coin.sideRotationCount);    // Calculate the scale and position values for the different coin faces    // The math uses sin/cos wave functions to similate the circular motion of 3D spin    coin.style.setProperty("--front-scale-multiplier", Math.max(Math.cos(coin.angle), 0));    coin.style.setProperty("--front-y-multiplier", Math.sin(coin.angle));    coin.style.setProperty("--middle-scale-multiplier", Math.abs(Math.cos(coin.angle), 0));    coin.style.setProperty("--middle-y-multiplier", Math.cos((coin.angle + Math.PI / 2) % Math.PI));    coin.style.setProperty("--back-scale-multiplier", Math.max(Math.cos(coin.angle - Math.PI), 0));    coin.style.setProperty("--back-y-multiplier", Math.sin(coin.angle - Math.PI));    coin.style.setProperty("--shine-opacity-multiplier", 4 * Math.sin((coin.angle + Math.PI / 2) % Math.PI) - 3.2);    coin.style.setProperty("--shine-bg-multiplier", -40 * (Math.cos((coin.angle + Math.PI / 2) % Math.PI) - 0.5) + "%");    // Repeat animation loop    if (coin.moveLoopCount < coin.maxMoveLoopCount) {      if (coin.moveLoopCount === coin.maxMoveLoopCount - 6) button.classList.add("shrink-landing");      window.requestAnimationFrame(flipCoinLoop);    } else {      button.classList.add("coin-landed");      coin.style.setProperty("opacity", 0);      setTimeout(() => {        button.classList.remove("clicked", "shrink-landing", "coin-landed");        setTimeout(() => {          resetCoin();        }, 300);      }, 1500);    }  };});]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
