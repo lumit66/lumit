@@ -37,7 +37,7 @@
   
   .category-bar-items{
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
     display: flex;
   }
   
