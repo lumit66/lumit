@@ -6,9 +6,10 @@
     display: flex;
     white-space: nowrap;
     overflow: hidden;
-    /*margin-bottom: 1rem;*/
-    margin: 0.5rem 0.5rem 0.5rem 60px; /* 仅修改左外边距为 20px */
-    
+    /*margin-bottom: 0.5rem;*/
+    margin: 0.5rem 0.5rem 0.5rem 0.5px;  /* 仅修改左外边距为 20px */
+    width: 700%; 
+    height: 150px /*无效设置，因为懒，设置后去除边框*/
     border: var(--style-border);
   }
   
@@ -53,6 +54,7 @@
     margin: 0 0.25rem;
     font-weight: bold;
     border-radius: 12px;
+
   }
   
   .category-bar-item:hover a{
