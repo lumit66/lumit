@@ -7,7 +7,8 @@
     white-space: nowrap;
     overflow: hidden;
     /*margin-bottom: 1rem;*/
-    margin: 0.5rem 0.5rem 20rem 20px; /* 仅修改左外边距为 20px */
+    margin: 0.5rem 0.5rem 0.5rem 60px; /* 仅修改左外边距为 20px */
+    
     border: var(--style-border);
   }
   
