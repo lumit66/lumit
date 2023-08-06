@@ -68,3 +68,11 @@
     margin-left: 1rem;
     font-weight: bold;
   }
+  
+  #article-container .flink .flink-list {
+  text-align: left!important;
+  }
+  
+  .flink-item-name, .flink-item-desc {
+  color: white!important;
+  }
