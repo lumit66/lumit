@@ -6,7 +6,7 @@
     display: flex;
     white-space: nowrap;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin: 0.5rem;
     border: var(--style-border);
   }
   
