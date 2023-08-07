@@ -8,26 +8,25 @@
 }
 
 /* 设置文字内容 :nth-child(1)的作用是选择第几个 */
-.vnick vinput:nth-child(1):before {
+.vnick:before {
     content: '输入QQ号会自动获取昵称和头像🐧';
 }
 
-.vmail vinpu:nth-child(2):before {
+.vmail:before {
     content: '收到回复将会发送到您的邮箱📧';
 }
 
-.vlink vinput:nth-child(3):before {
+.vlink:before {
     content: '可以通过昵称访问您的网站🔗';
 }
 
 /* 当用户点击输入框时显示 */
-.vinput:focus-within::before,
-.vinput:focus-within::after {
+.vinput:focus + .vicon:before {
     display: block;
 }
 
 /* 主内容区 */
-.vinput::before {
+.vinput:before {
     /* 先隐藏起来 */
     display: none;
     /* 绝对定位 */
@@ -49,7 +48,7 @@
 }
 
 /* 小角标 */
-.vinput::after {
+.vinput:focus + .vicon:after {
     display: none;
     content: '';
     position: absolute;
