@@ -8,15 +8,15 @@
 }
 
 /* 设置文字内容 :nth-child(1)的作用是选择第几个 */
-.vnick:before {
+.v[data-class=v] .vwrap .vheader .vinput:before {
     content: '输入QQ号会自动获取昵称和头像🐧';
 }
 
-.vmail:before {
+.v[data-class=v] .vwrap .vheader .vinput:before {
     content: '收到回复将会发送到您的邮箱📧';
 }
 
-.vlink:before {
+.v[data-class=v] .vwrap .vheader .vinput:before {
     content: '可以通过昵称访问您的网站🔗';
 }
 
