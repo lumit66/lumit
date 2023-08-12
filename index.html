@@ -56,7 +56,7 @@
   isHome: true,
   isHighlightShrink: true,
   isToc: false,
-  postUpdate: '2023-08-12 14:17:29'
+  postUpdate: '2023-08-12 14:37:49'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -233,12 +233,12 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-
       strings: str,
       startDelay: 300,
       typeSpeed: 150,
-      loop: true,
+      loop: false,
       backSpeed: 50,
     }, null))
   },
   run: (subtitleType) => {
-    if (false) {
+    if (true) {
       if (typeof Typed === 'function') {
         subtitleType()
       } else {
@@ -250,35 +250,20 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-
   }
 }
 </script><script>function subtitleType() {
-  const savedHitokotos = JSON.parse(localStorage.getItem('savedHitokotos')) || [];
-
   fetch('https://v1.hitokoto.cn')
           .then(response => response.json())
           .then(data => {
-            const hitokoto = data.hitokoto;
-
-            if (!savedHitokotos.includes(hitokoto)) {
-              if (false) {
-                const from = '出自 -- ' + data.from;
-                const sub = [];
-                sub.unshift(data.hitokoto, from);
-                typedJSFn.init(sub);
-              } else {
-                document.getElementById('subtitle').textContent = data.hitokoto;
-              }
-
-              savedHitokotos.push(hitokoto);
-              localStorage.setItem('savedHitokotos', JSON.stringify(savedHitokotos));
+            if (true) {
+              const from = '出自 -- ' + data.from
+              const sub = []
+              sub.unshift(data.hitokoto, from)
+              typedJSFn.init(sub)
             } else {
-              subtitleType(); // Try again for a unique hitokoto
+              document.getElementById('subtitle').textContent = data.hitokoto
             }
           })
-          .catch(error => {
-            console.error('Error fetching hitokoto:', error);
-          });
 }
-
-typedJSFn.run(subtitleType);
+typedJSFn.run(subtitleType)
 
 
 
