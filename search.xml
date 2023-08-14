@@ -8,7 +8,7 @@
       <link href="/posts/1.html"/>
       <url>/posts/1.html</url>
       
-        <content type="html"><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="这是一张测试图片"><a href="#这是一张测试图片" class="headerlink" title="这是一张测试图片"></a>这是一张测试图片</h2><p><img src="C:\Users\d'f'f'h'g\AppData\Roaming\Typora\typora-user-images\image-20230808151537614.png" alt="image-20230808151537614"></p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h1 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h1 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       <categories>
@@ -49,28 +49,6 @@
     
     <entry>
       <title></title>
-      <link href="/js/categoryBar.js"/>
-      <url>/js/categoryBar.js</url>
-      
-        <content type="html"><![CDATA[categoriesBarActive()topCategoriesBarScroll()//分类条function categoriesBarActive(){  var urlinfo = window.location.pathname;  urlinfo = decodeURIComponent(urlinfo)  console.log(urlinfo);  //判断是否是首页  if (urlinfo == '/'){    if (document.querySelector('#category-bar')){      document.getElementById('首页').classList.add("select")    }  }else {    // 验证是否是分类链接    var pattern = /\/categories\/.*?\//;    var patbool = pattern.test(urlinfo);    console.log(patbool);    // 获取当前的分类    if (patbool) {      var valuegroup = urlinfo.split("/");      console.log(valuegroup[2]);      // 获取当前分类      var nowCategorie = valuegroup[2];      if (document.querySelector('#category-bar')){        document.getElementById(nowCategorie).classList.add("select");      }    }  }  }//鼠标控制横向滚动function topCategoriesBarScroll(){  if (document.getElementById("category-bar-items")){    let xscroll = document.getElementById("category-bar-items");  xscroll.addEventListener("mousewheel", function (e) {    //计算鼠标滚轮滚动的距离    let v = -e.wheelDelta / 2;    xscroll.scrollLeft += v;    //阻止浏览器默认方法    e.preventDefault();}, false);  }}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/nav.js"/>
-      <url>/js/nav.js</url>
-      
-        <content type="html"><![CDATA[document.getElementById("name-container").setAttribute("style", "display:none");var position = $(window).scrollTop();$(window).scroll(function () {  var scroll = $(window).scrollTop();  if (scroll > position) {    document.getElementById("name-container").setAttribute("style", "");    document.getElementsByClassName("menus_items")[1].setAttribute("style", "display:none!important");  } else {    document.getElementsByClassName("menus_items")[1].setAttribute("style", "");    document.getElementById("name-container").setAttribute("style", "display:none");  }  position = scroll;});function scrollToTop(){    document.getElementsByClassName("menus_items")[1].setAttribute("style","");    document.getElementById("name-container").setAttribute("style","display:none");    btf.scrollToDest(0, 500);}document.getElementById("page-name").innerText = document.title.split(" |")[0];]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
       
@@ -93,10 +71,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/recent-post.css"/>
-      <url>/css/recent-post.css</url>
+      <link href="/js/categoryBar.js"/>
+      <url>/js/categoryBar.js</url>
       
-        <content type="html"><![CDATA[#recent-posts>.recent-post-item {    position: relative;}/* 最新文章图标 */.newPost-left,.newPost-right {    position: absolute;    top: 0;    color: white;    padding: 0 15px;    background-color: #49b1f5;    border-radius: 0 0 10px 10px;}.newPost-left {    left: 15px;}.newPost-right {    right: 15px;}]]></content>
+        <content type="html"><![CDATA[categoriesBarActive()topCategoriesBarScroll()//分类条function categoriesBarActive(){  var urlinfo = window.location.pathname;  urlinfo = decodeURIComponent(urlinfo)  console.log(urlinfo);  //判断是否是首页  if (urlinfo == '/'){    if (document.querySelector('#category-bar')){      document.getElementById('首页').classList.add("select")    }  }else {    // 验证是否是分类链接    var pattern = /\/categories\/.*?\//;    var patbool = pattern.test(urlinfo);    console.log(patbool);    // 获取当前的分类    if (patbool) {      var valuegroup = urlinfo.split("/");      console.log(valuegroup[2]);      // 获取当前分类      var nowCategorie = valuegroup[2];      if (document.querySelector('#category-bar')){        document.getElementById(nowCategorie).classList.add("select");      }    }  }  }//鼠标控制横向滚动function topCategoriesBarScroll(){  if (document.getElementById("category-bar-items")){    let xscroll = document.getElementById("category-bar-items");  xscroll.addEventListener("mousewheel", function (e) {    //计算鼠标滚轮滚动的距离    let v = -e.wheelDelta / 2;    xscroll.scrollLeft += v;    //阻止浏览器默认方法    e.preventDefault();}, false);  }}]]></content>
       
     </entry>
     
@@ -108,6 +86,17 @@
       <url>/css/iconfont.css</url>
       
         <content type="html"><![CDATA[@font-face {  font-family: "iconfont"; /* Project id 4208231 */  src: url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.woff2?t=1691829645162') format('woff2'),       url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.woff?t=1691829645162') format('woff'),       url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.ttf?t=1691829645162') format('truetype');}.iconfont {  font-family: "iconfont" !important;  font-size: 16px;  font-style: normal;  -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;}.icon-QQ:before {  content: "\e65e";}.icon-github:before {  content: "\ea0b";}.icon-shejiaotubiao-46:before {  content: "\e64b";}.icon-bilibili:before {  content: "\e609";}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/recent-post.css"/>
+      <url>/css/recent-post.css</url>
+      
+        <content type="html"><![CDATA[#recent-posts>.recent-post-item {    position: relative;}/* 最新文章图标 */.newPost-left,.newPost-right {    position: absolute;    top: 0;    color: white;    padding: 0 15px;    background-color: #49b1f5;    border-radius: 0 0 10px 10px;}.newPost-left {    left: 15px;}.newPost-right {    right: 15px;}]]></content>
       
     </entry>
     
@@ -130,6 +119,17 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/nav.js"/>
+      <url>/js/nav.js</url>
+      
+        <content type="html"><![CDATA[document.getElementById("name-container").setAttribute("style", "display:none");var position = $(window).scrollTop();$(window).scroll(function () {  var scroll = $(window).scrollTop();  if (scroll > position) {    document.getElementById("name-container").setAttribute("style", "");    document.getElementsByClassName("menus_items")[1].setAttribute("style", "display:none!important");  } else {    document.getElementsByClassName("menus_items")[1].setAttribute("style", "");    document.getElementById("name-container").setAttribute("style", "display:none");  }  position = scroll;});function scrollToTop(){    document.getElementsByClassName("menus_items")[1].setAttribute("style","");    document.getElementById("name-container").setAttribute("style","display:none");    btf.scrollToDest(0, 500);}document.getElementById("page-name").innerText = document.title.split(" |")[0];]]></content>
       
     </entry>
     
