@@ -48,6 +48,6 @@ img.vimg:hover {
 
 /* 这是修改LOGO图片大小样式 */
 .site-icon {
-  width: auto; /* 设置你想要的宽度 */
+  width: 50px; /* 设置你想要的宽度 */
   height: auto; /* 让高度自适应 */
 }
