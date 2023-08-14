@@ -6,11 +6,6 @@
 	background-color: rgba(255, 255, 255, 0);
 	resize: vertical
 }
-/* 评论框背景及隐藏 */
-#veditor:focus{
-	background-position-y: 200px;
-	transition: all 0.2s ease-in-out 0s;
-}
 
 /* 评论及回复添加边框 */
 #vcomments .vcards .vcard {
