@@ -33,12 +33,6 @@
 	border: none;
 	box-shadow: none;
 }
-#vcomments .vsubmit.vbtn {
-	color: black;border: none;background:#e0c4d8;
-}
-#vcomments .vsubmit.vbtn:hover {
-	background:#e941e5;
-}
 
 /* 评论头像旋转 */
 img.vimg {
