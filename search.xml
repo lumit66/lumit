@@ -71,17 +71,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/icon.css"/>
-      <url>/css/icon.css</url>
-      
-        <content type="html"><![CDATA[svg.icon {  width: 1.15em; height: 1.15em;  /* width和height定义图标的默认宽度和高度*/  vertical-align: -0.15em;  fill: currentColor;  overflow: hidden;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/heoMainColor.css"/>
       <url>/css/heoMainColor.css</url>
       
