@@ -46,51 +46,6 @@ img.vimg:hover {
 	-ms-transform: rotate(360deg);
 }
 
-/* 显示的提示文本 */
-.vnick::before {
-    content: '输入QQ号会自动获取昵称和头像🐧';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #444;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.vmail::before {
-    content: '收到回复将会发送到您的邮箱📧';
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #444;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-/* 鼠标悬停时显示提示文本 */
-.vnick:hover::before,
-.vnick:focus::before {
-    opacity: 1;
-}
-
-.vmail:hover::before,
-.vmail:focus::before {
-    opacity: 1;
-}
 
 /* 这是修改LOGO图片大小样式 */
 .site-icon {
