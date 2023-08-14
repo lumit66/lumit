@@ -15,6 +15,7 @@
 
 .icon-QQ:before {
   content: "\e65e";
+  font-size: 30px;
 }
 
 .icon-github:before {
