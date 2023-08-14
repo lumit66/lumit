@@ -46,8 +46,8 @@ img.vimg:hover {
 	-ms-transform: rotate(360deg);
 }
 
-/* 修改图片大小样式 */
+/* 这是修改LOGO图片大小样式 */
 .site-icon {
-  width: 100px; /* 设置你想要的宽度 */
-  height: 200px; /* 让高度自适应 */
+  width: auto; /* 设置你想要的宽度 */
+  height: auto; /* 让高度自适应 */
 }
