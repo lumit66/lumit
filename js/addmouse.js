@@ -1,3 +1,4 @@
+window.onload = function() {
 // 1.获取元素
     var oBox = document.querySelector(".aplayer-body");
 
