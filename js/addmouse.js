@@ -17,13 +17,11 @@ window.onload = function() {
         document.onmousemove = function (ev) {
             if (!isDragging) return; // 如果没有在拖拽则不处理
             
-            requestAnimationFrame(function() {
-                var ev = ev || window.event;
-                var x3 = ev.clientX;
-                var y3 = ev.clientY;
-                oBox.style.top = y3 - y2 + "px";
-                oBox.style.left = x3 - x2 + "px";
-            });
+            var ev = ev || window.event;
+            var x3 = ev.clientX;
+            var y3 = ev.clientY;
+            oBox.style.top = y3 - y2 + "px";
+            oBox.style.left = x3 - x2 + "px";
         }
     }
 
