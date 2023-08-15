@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const aplayerBody = document.querySelector('.aplayer-body');
+  const aplayerBody = document.querySelector('.aplayer.aplayer-fixed');
   let isDragging = false;
   let offset = { x: 0, y: 0 };
 
