@@ -16,11 +16,14 @@ window.onload = function() {
         // 鼠标移动
         document.onmousemove = function (ev) {
             if (!isDragging) return; // 如果没有在拖拽则不处理
-            var ev = ev || window.event;
-            var x3 = ev.clientX;
-            var y3 = ev.clientY;
-            oBox.style.top = y3 - y2 + "px";
-            oBox.style.left = x3 - x2 + "px";
+            
+            requestAnimationFrame(function() {
+                var ev = ev || window.event;
+                var x3 = ev.clientX;
+                var y3 = ev.clientY;
+                oBox.style.top = y3 - y2 + "px";
+                oBox.style.left = x3 - x2 + "px";
+            });
         }
     }
 
