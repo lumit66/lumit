@@ -1,5 +1,4 @@
-window.onload = function() {
-    // 1.获取元素，使用类名选择器
+// 1.获取元素
     var oBox = document.querySelector(".aplayer-body");
 
     // 2.鼠标按下事件
@@ -16,12 +15,13 @@ window.onload = function() {
             var x3 = ev.pageX;
             var y3 = ev.pageY;
             oBox.style.top = y3 - y2 + "px";
-            oBox.style.left = x3 - x2 + "px";
+            oBox.style.left = x3 - x2 + "px"
         }
     }
 
     // 4.鼠标松开事件
     document.onmouseup = function () {
-        document.onmousemove = null;
+        document.onmousemove = function () {
+
+        }
     }
-};
