@@ -106,7 +106,7 @@
 	margin: 0;
 	z-index: 98;
 	pointer-events: none;
-	text-shadow: -1px -1px 0 rgba(0,0,0,.8)
+	text-shadow: -1px -1px 0 rgba(0, 51, 102,0.8)
 }
 
 .aplayer.aplayer-fixed .aplayer-lrc:after,.aplayer.aplayer-fixed .aplayer-lrc:before {
@@ -503,7 +503,7 @@
 
 .aplayer .aplayer-lrc p {
 	font-size: 12px;
-	color: #AEAEAE;
+	color: #0ff5ff;
 	line-height: 16px![]mportant;
 	height: 16px![]mportant;
 	padding: 0![]mportant;
