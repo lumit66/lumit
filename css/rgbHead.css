@@ -36,7 +36,7 @@
 .newheadBox {
     position: absolute;
     top: 25px;
-    left: 2px;
+    left: -4px;
     width: 100px;
     height: 100px;
     border-radius: 50px;
