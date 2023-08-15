@@ -27,21 +27,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
+      <link href="/css/aplayer.css"/>
+      <url>/css/aplayer.css</url>
       
-        <content type="html"><![CDATA[/* 字体样式 */@font-face {    font-family: 'ziti';    font-display: swap;    src: url('/fonts/MaoKenZhuYuanTi.ttf') format("truetype");}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/categoryBar.css"/>
-      <url>/css/categoryBar.css</url>
-      
-        <content type="html"><![CDATA[/* 首页分类条展示 */#category-bar{    padding: 0.4rem 1rem 0.4rem 0.5rem;    background: var(--heo-card-bg);    border-radius: 12px;    display: flex;    white-space: nowrap;    overflow: hidden;    /*margin-bottom: 0.5rem;*/    margin: 0.5rem 0.5rem 0.5rem 0.5px;  /* 仅修改左外边距为 20px */    width: 700%;     height: 150px /*无效设置，因为懒，设置后去除边框*/    border: var(--style-border);  }    @media screen and (max-width: 768px){    #category-bar{      border-radius: 0;    }  }    #category #category-bar{    padding: 0;    border: none;  }    #category a.category-bar-item.select a{    display: none;  }    .category-in-bar{    display: flex;    white-space: nowrap;  }    .category-in-bar-tips{    margin-right: 1rem;  }    .category-bar-items{    white-space: nowrap;    overflow-x: scroll;    display: flex;  }        .category-bar-items::-webkit-scrollbar{    display: none;  }    .category-bar-item a{    padding: 0.1rem 0.5rem;    margin: 0 0.25rem;    font-weight: bold;    border-radius: 12px;  }    .category-bar-item:hover a{    background: var(--heo-main);    color: var(--heo-white);  }    .category-bar-item.select a {    background: var(--heo-main);    color: var(--heo-white);    border-radius: 12px;  }    .category-bar-more{    margin-left: 1rem;    font-weight: bold;  }]]></content>
+        <content type="html"><![CDATA[/*aplayer收入侧边栏*/.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{    left: -66px !important}.aplayer-body:hover{    left: 0px !important}/*配色和歌词*/.aplayer.aplayer-fixed .aplayer-lrc {    display: block;    position: fixed;    bottom: 10px;    left: 0;    right: 0;    margin: 0;    z-index: 98;    pointer-events: none;    text-shadow: -1px -1px 0 #fff;  }.aplayer .aplayer-lrc p {color: #0ff5ff !important;}]]></content>
       
     </entry>
     
@@ -60,6 +49,17 @@
     
     <entry>
       <title></title>
+      <link href="/css/categoryBar.css"/>
+      <url>/css/categoryBar.css</url>
+      
+        <content type="html"><![CDATA[/* 首页分类条展示 */#category-bar{    padding: 0.4rem 1rem 0.4rem 0.5rem;    background: var(--heo-card-bg);    border-radius: 12px;    display: flex;    white-space: nowrap;    overflow: hidden;    /*margin-bottom: 0.5rem;*/    margin: 0.5rem 0.5rem 0.5rem 0.5px;  /* 仅修改左外边距为 20px */    width: 700%;     height: 150px /*无效设置，因为懒，设置后去除边框*/    border: var(--style-border);  }    @media screen and (max-width: 768px){    #category-bar{      border-radius: 0;    }  }    #category #category-bar{    padding: 0;    border: none;  }    #category a.category-bar-item.select a{    display: none;  }    .category-in-bar{    display: flex;    white-space: nowrap;  }    .category-in-bar-tips{    margin-right: 1rem;  }    .category-bar-items{    white-space: nowrap;    overflow-x: scroll;    display: flex;  }        .category-bar-items::-webkit-scrollbar{    display: none;  }    .category-bar-item a{    padding: 0.1rem 0.5rem;    margin: 0 0.25rem;    font-weight: bold;    border-radius: 12px;  }    .category-bar-item:hover a{    background: var(--heo-main);    color: var(--heo-white);  }    .category-bar-item.select a {    background: var(--heo-main);    color: var(--heo-white);    border-radius: 12px;  }    .category-bar-more{    margin-left: 1rem;    font-weight: bold;  }]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/css/heoMainColor.css"/>
       <url>/css/heoMainColor.css</url>
       
@@ -71,32 +71,10 @@
     
     <entry>
       <title></title>
-      <link href="/css/aplayer.css"/>
-      <url>/css/aplayer.css</url>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[/*aplayer收入侧边栏*/.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{    left: -66px !important}.aplayer-body:hover{    left: 0px !important}/*配色和歌词*/.aplayer.aplayer-fixed .aplayer-lrc {    display: block;    position: fixed;    bottom: 10px;    left: 0;    right: 0;    margin: 0;    z-index: 98;    pointer-events: none;    text-shadow: -1px -1px 0 #fff;  }.aplayer .aplayer-lrc p {color: #0ff5ff !important;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/iconfont.css"/>
-      <url>/css/iconfont.css</url>
-      
-        <content type="html"><![CDATA[@font-face {  font-family: "iconfont"; /* Project id 4208231 */  src: url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.woff2?t=1691829645162') format('woff2'),       url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.woff?t=1691829645162') format('woff'),       url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.ttf?t=1691829645162') format('truetype');}.iconfont {  font-family: "iconfont" !important;  font-size: 25px;  font-style: normal;  -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;}.icon-QQ:before {  content: "\e65e";  font-size: 25px;    }.icon-github:before {  content: "\ea0b";}.icon-shejiaotubiao-46:before {  content: "\e64b";}.icon-bilibili:before {  content: "\e609";}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/recent-post.css"/>
-      <url>/css/recent-post.css</url>
-      
-        <content type="html"><![CDATA[#recent-posts>.recent-post-item {    position: relative;}/* 最新文章图标 */.newPost-left,.newPost-right {    position: absolute;    top: 0;    color: white;    padding: 0 15px;    background-color: #49b1f5;    border-radius: 0 0 10px 10px;}.newPost-left {    left: 15px;}.newPost-right {    right: 15px;}]]></content>
+        <content type="html"><![CDATA[/* 字体样式 */@font-face {    font-family: 'ziti';    font-display: swap;    src: url('/fonts/MaoKenZhuYuanTi.ttf') format("truetype");}]]></content>
       
     </entry>
     
@@ -129,29 +107,7 @@
       <link href="/js/addmouse.js"/>
       <url>/js/addmouse.js</url>
       
-        <content type="html"><![CDATA[    // 1.获取元素    var oBox = document.getElementById("aplayer-body");    // 2.鼠标按下事件    oBox.onmousedown = function (ev) {        var ev = ev || window.event;        // 获取鼠标相对于盒子的坐标        var x2 = ev.offsetX;        var y2 = ev.offsetY;        // 鼠标移动        document.onmousemove = function (ev) {            var ev = ev || window.event;            var x3 = ev.pageX;            var y3 = ev.pageY;            oBox.style.top = y3 - y2 + "px";            oBox.style.left = x3 - x2 + "px"        }    }    // 4.鼠标松开事件    document.onmouseup = function () {        document.onmousemove = function () {        }    }]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/rgbHead.css"/>
-      <url>/css/rgbHead.css</url>
-      
-        <content type="html"><![CDATA[/* rgb头像魔改 */.avatar-img {    display: flex;    justify-content: center;    align-items: center;    overflow: visible;    border-radius: 55px;    box-shadow: 0 0 10px black;    background: linear-gradient(135deg, rgb(1, 255, 234), rgb(255, 251, 14), rgb(0, 238, 255));    animation: color 3s linear infinite;    transition: all 0.5s;}.avatar-img:hover {    box-shadow: 0 0 15px 0 #000;}@keyframes color {    to {        filter: hue-rotate(360deg);    }}/* 隐藏掉原先的头像 */.avatar-img img {    display: none;}.centerBox {    display: flex;    flex-direction: column;    align-items: center;}/* 引入新的头像 url是你的头像位置 */.newheadBox {    position: absolute;    top: 25px;    width: 100px;    height: 100px;    border-radius: 50px;    background: url(/img/头像.jpg);    background-size: cover;    z-index: 20;}/* 防止和上面的菜单冲突 添加一下zindex */#nav .site-page:not(.child):after {    z-index: 23 !important;}/*头像旋转*/@keyframes turn {    0% {        -webkit-transform: rotate(0deg);    }    25% {        -webkit-transform: rotate(90deg);    }    50% {        -webkit-transform: rotate(180deg);    }    75% {        -webkit-transform: rotate(270deg);    }    100% {        -webkit-transform: rotate(360deg);    }}.newheadBox:hover {    animation: turn linear 0.5s;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/categoryBar.js"/>
-      <url>/js/categoryBar.js</url>
-      
-        <content type="html"><![CDATA[categoriesBarActive()topCategoriesBarScroll()//分类条function categoriesBarActive(){  var urlinfo = window.location.pathname;  urlinfo = decodeURIComponent(urlinfo)  console.log(urlinfo);  //判断是否是首页  if (urlinfo == '/'){    if (document.querySelector('#category-bar')){      document.getElementById('首页').classList.add("select")    }  }else {    // 验证是否是分类链接    var pattern = /\/categories\/.*?\//;    var patbool = pattern.test(urlinfo);    console.log(patbool);    // 获取当前的分类    if (patbool) {      var valuegroup = urlinfo.split("/");      console.log(valuegroup[2]);      // 获取当前分类      var nowCategorie = valuegroup[2];      if (document.querySelector('#category-bar')){        document.getElementById(nowCategorie).classList.add("select");      }    }  }  }//鼠标控制横向滚动function topCategoriesBarScroll(){  if (document.getElementById("category-bar-items")){    let xscroll = document.getElementById("category-bar-items");  xscroll.addEventListener("mousewheel", function (e) {    //计算鼠标滚轮滚动的距离    let v = -e.wheelDelta / 2;    xscroll.scrollLeft += v;    //阻止浏览器默认方法    e.preventDefault();}, false);  }}]]></content>
+        <content type="html"><![CDATA[    // 1.获取元素    var oBox = document.getElementById(".aplayer");    // 2.鼠标按下事件    oBox.onmousedown = function (ev) {        var ev = ev || window.event;        // 获取鼠标相对于盒子的坐标        var x2 = ev.offsetX;        var y2 = ev.offsetY;        // 鼠标移动        document.onmousemove = function (ev) {            var ev = ev || window.event;            var x3 = ev.pageX;            var y3 = ev.pageY;            oBox.style.top = y3 - y2 + "px";            oBox.style.left = x3 - x2 + "px"        }    }    // 4.鼠标松开事件    document.onmouseup = function () {        document.onmousemove = function () {        }    }]]></content>
       
     </entry>
     
@@ -163,17 +119,6 @@
       <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/js/nav.js"/>
-      <url>/js/nav.js</url>
-      
-        <content type="html"><![CDATA[document.getElementById("name-container").setAttribute("style", "display:none");var position = $(window).scrollTop();$(window).scroll(function () {  var scroll = $(window).scrollTop();  if (scroll > position) {    document.getElementById("name-container").setAttribute("style", "");    document.getElementsByClassName("menus_items")[1].setAttribute("style", "display:none!important");  } else {    document.getElementsByClassName("menus_items")[1].setAttribute("style", "");    document.getElementById("name-container").setAttribute("style", "display:none");  }  position = scroll;});function scrollToTop(){    document.getElementsByClassName("menus_items")[1].setAttribute("style","");    document.getElementById("name-container").setAttribute("style","display:none");    btf.scrollToDest(0, 500);}document.getElementById("page-name").innerText = document.title.split(" |")[0];]]></content>
       
     </entry>
     
@@ -196,6 +141,61 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/categoryBar.js"/>
+      <url>/js/categoryBar.js</url>
+      
+        <content type="html"><![CDATA[categoriesBarActive()topCategoriesBarScroll()//分类条function categoriesBarActive(){  var urlinfo = window.location.pathname;  urlinfo = decodeURIComponent(urlinfo)  console.log(urlinfo);  //判断是否是首页  if (urlinfo == '/'){    if (document.querySelector('#category-bar')){      document.getElementById('首页').classList.add("select")    }  }else {    // 验证是否是分类链接    var pattern = /\/categories\/.*?\//;    var patbool = pattern.test(urlinfo);    console.log(patbool);    // 获取当前的分类    if (patbool) {      var valuegroup = urlinfo.split("/");      console.log(valuegroup[2]);      // 获取当前分类      var nowCategorie = valuegroup[2];      if (document.querySelector('#category-bar')){        document.getElementById(nowCategorie).classList.add("select");      }    }  }  }//鼠标控制横向滚动function topCategoriesBarScroll(){  if (document.getElementById("category-bar-items")){    let xscroll = document.getElementById("category-bar-items");  xscroll.addEventListener("mousewheel", function (e) {    //计算鼠标滚轮滚动的距离    let v = -e.wheelDelta / 2;    xscroll.scrollLeft += v;    //阻止浏览器默认方法    e.preventDefault();}, false);  }}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/nav.js"/>
+      <url>/js/nav.js</url>
+      
+        <content type="html"><![CDATA[document.getElementById("name-container").setAttribute("style", "display:none");var position = $(window).scrollTop();$(window).scroll(function () {  var scroll = $(window).scrollTop();  if (scroll > position) {    document.getElementById("name-container").setAttribute("style", "");    document.getElementsByClassName("menus_items")[1].setAttribute("style", "display:none!important");  } else {    document.getElementsByClassName("menus_items")[1].setAttribute("style", "");    document.getElementById("name-container").setAttribute("style", "display:none");  }  position = scroll;});function scrollToTop(){    document.getElementsByClassName("menus_items")[1].setAttribute("style","");    document.getElementById("name-container").setAttribute("style","display:none");    btf.scrollToDest(0, 500);}document.getElementById("page-name").innerText = document.title.split(" |")[0];]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/iconfont.css"/>
+      <url>/css/iconfont.css</url>
+      
+        <content type="html"><![CDATA[@font-face {  font-family: "iconfont"; /* Project id 4208231 */  src: url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.woff2?t=1691829645162') format('woff2'),       url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.woff?t=1691829645162') format('woff'),       url('//at.alicdn.com/t/c/font_4208231_6jipz1kew9r.ttf?t=1691829645162') format('truetype');}.iconfont {  font-family: "iconfont" !important;  font-size: 25px;  font-style: normal;  -webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale;}.icon-QQ:before {  content: "\e65e";  font-size: 25px;    }.icon-github:before {  content: "\ea0b";}.icon-shejiaotubiao-46:before {  content: "\e64b";}.icon-bilibili:before {  content: "\e609";}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/recent-post.css"/>
+      <url>/css/recent-post.css</url>
+      
+        <content type="html"><![CDATA[#recent-posts>.recent-post-item {    position: relative;}/* 最新文章图标 */.newPost-left,.newPost-right {    position: absolute;    top: 0;    color: white;    padding: 0 15px;    background-color: #49b1f5;    border-radius: 0 0 10px 10px;}.newPost-left {    left: 15px;}.newPost-right {    right: 15px;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/rgbHead.css"/>
+      <url>/css/rgbHead.css</url>
+      
+        <content type="html"><![CDATA[/* rgb头像魔改 */.avatar-img {    display: flex;    justify-content: center;    align-items: center;    overflow: visible;    border-radius: 55px;    box-shadow: 0 0 10px black;    background: linear-gradient(135deg, rgb(1, 255, 234), rgb(255, 251, 14), rgb(0, 238, 255));    animation: color 3s linear infinite;    transition: all 0.5s;}.avatar-img:hover {    box-shadow: 0 0 15px 0 #000;}@keyframes color {    to {        filter: hue-rotate(360deg);    }}/* 隐藏掉原先的头像 */.avatar-img img {    display: none;}.centerBox {    display: flex;    flex-direction: column;    align-items: center;}/* 引入新的头像 url是你的头像位置 */.newheadBox {    position: absolute;    top: 25px;    width: 100px;    height: 100px;    border-radius: 50px;    background: url(/img/头像.jpg);    background-size: cover;    z-index: 20;}/* 防止和上面的菜单冲突 添加一下zindex */#nav .site-page:not(.child):after {    z-index: 23 !important;}/*头像旋转*/@keyframes turn {    0% {        -webkit-transform: rotate(0deg);    }    25% {        -webkit-transform: rotate(90deg);    }    50% {        -webkit-transform: rotate(180deg);    }    75% {        -webkit-transform: rotate(270deg);    }    100% {        -webkit-transform: rotate(360deg);    }}.newheadBox:hover {    animation: turn linear 0.5s;}]]></content>
       
     </entry>
     

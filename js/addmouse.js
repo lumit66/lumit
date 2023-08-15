@@ -1,5 +1,5 @@
     // 1.获取元素
-    var oBox = document.getElementById("aplayer-body");
+    var oBox = document.getElementById(".aplayer");
 
     // 2.鼠标按下事件
     oBox.onmousedown = function (ev) {
