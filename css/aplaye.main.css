@@ -13,22 +13,6 @@
 	position: relative
 }
 
-/* 在右上角添加拖动标志样式 */
-.aplayer::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 10px;
-    height: 10px;
-    transform: rotate(-45deg);
-    border: 2px solid #363636;
-    border-left: none;
-    border-top: none;
-    cursor: move;
-}
-
-
 .aplayer * {
 	box-sizing: content-box
 }
