@@ -1,33 +1,36 @@
-window.onload = function() {
-    // 1. 获取元素，使用类名选择器
-    var oBox = document.querySelector(".aplayer-body");
-    
-    var isDragging = false; // 标记是否正在拖拽
+window.onload = function () {
+  var mouseOffsetX = 0; // 记录当前鼠标位置
+  var mouseOffsetY = 0;
+  var isDraging = false; // 记录元素是否可以拖动
 
-    // 2. 鼠标按下事件
-    oBox.onmousedown = function (ev) {
-        isDragging = true; // 开始拖拽
-        var ev = ev || window.event;
+  // 鼠标事件1：鼠标按下标记元素为可拖动状态，并且记下鼠标当前位置的偏移
+  var oBox = document.querySelector('.aplayer-body');
 
-        // 获取鼠标相对于盒子的坐标
-        var x2 = ev.clientX - oBox.getBoundingClientRect().left;
-        var y2 = ev.clientY - oBox.getBoundingClientRect().top;
+  oBox.addEventListener('mousedown', function (e) {
+    var e = e || window.event;
+    mouseOffsetX = e.pageX - oBox.offsetLeft;
+    mouseOffsetY = e.pageY - oBox.offsetTop;
 
-        // 鼠标移动
-        document.onmousemove = function (ev) {
-            if (!isDragging) return; // 如果没有在拖拽则不处理
-            
-            var ev = ev || window.event;
-            var x3 = ev.clientX;
-            var y3 = ev.clientY;
-            oBox.style.top = y3 - y2 + "px";
-            oBox.style.left = x3 - x2 + "px";
-        }
+    isDraging = true;
+  });
+
+  // 鼠标事件2：鼠标开始移动，要检测浮层是否标记为移动，如果是则更新元素位置到当前鼠标位置
+  document.onmousemove = function (e) {
+    var e = e || window.event;
+    var moveX = 0;
+    var moveY = 0;
+
+    if (isDraging === true) {
+      moveX = e.pageX - mouseOffsetX;
+      moveY = e.pageY - mouseOffsetY;
+
+      oBox.style.left = moveX + "px";
+      oBox.style.top = moveY + "px";
     }
+  };
 
-    // 3. 鼠标松开事件
-    document.onmouseup = function () {
-        isDragging = false; // 停止拖拽
-        document.onmousemove = null;
-    }
+  //  鼠标事件3：放开鼠标后，元素变为不可拖动
+  document.onmouseup = function () {
+    isDraging = false;
+  };
 };
