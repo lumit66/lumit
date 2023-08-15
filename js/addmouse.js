@@ -1,22 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const aplayerBody = document.querySelector('.aplayer.aplayer-fixed');
-  let isDragging = false;
-  let offset = { x: 0, y: 0 };
+    // 1.获取元素
+    var oBox = document.getElementById("aplayer-body");
 
-  aplayerBody.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    const rect = aplayerBody.getBoundingClientRect();
-    offset = { x: e.clientX - rect.left, y: e.clientY - rect.top };
-  });
+    // 2.鼠标按下事件
+    oBox.onmousedown = function (ev) {
+        var ev = ev || window.event;
 
-  document.addEventListener('mousemove', (e) => {
-    if (isDragging) {
-      aplayerBody.style.left = `${e.clientX - offset.x}px`;
-      aplayerBody.style.top = `${e.clientY - offset.y}px`;
+
+        // 获取鼠标相对于盒子的坐标
+        var x2 = ev.offsetX;
+        var y2 = ev.offsetY;
+
+
+
+        // 鼠标移动
+        document.onmousemove = function (ev) {
+            var ev = ev || window.event;
+            var x3 = ev.pageX;
+            var y3 = ev.pageY;
+            oBox.style.top = y3 - y2 + "px";
+            oBox.style.left = x3 - x2 + "px"
+        }
     }
-  });
 
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-});
+    // 4.鼠标松开事件
+    document.onmouseup = function () {
+        document.onmousemove = function () {
+
+        }
+    }
+
