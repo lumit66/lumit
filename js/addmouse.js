@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var mouseOffsetX = 0;
-  var mouseOffsetY = 0;
   var isDragging = false;
-
   var oBox = document.querySelector('.aplayer-body');
   var container = document.body;
 
@@ -34,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
       startY = e.touches[0].clientY;
     }
 
-    if (e.target === oBox) {
+    if (oBox !== null && e.target === oBox) {
       isDragging = true;
-      mouseOffsetX = startX - oBox.getBoundingClientRect().left;
-      mouseOffsetY = startY - oBox.getBoundingClientRect().top;
+      deltaX = 0;
+      deltaY = 0;
+      lastMoveTime = Date.now();
     } else {
       isDragging = false;
     }
@@ -68,7 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
       startX = moveX;
       startY = moveY;
 
-      oBox.style.transform = `translate3d(${moveX - mouseOffsetX}px, ${moveY - mouseOffsetY}px, 0)`;
+      var offsetX = moveX - oBox.offsetWidth / 2;
+      var offsetY = moveY - oBox.offsetHeight / 2;
+      oBox.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
     }
   }
 
@@ -92,7 +92,9 @@ document.addEventListener('DOMContentLoaded', function () {
           var newX = moveX + distanceX;
           var newY = moveY + distanceY;
 
-          oBox.style.transform = `translate3d(${newX - mouseOffsetX}px, ${newY - mouseOffsetY}px, 0)`;
+          var offsetX = newX - oBox.offsetWidth / 2;
+          var offsetY = newY - oBox.offsetHeight / 2;
+          oBox.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0)`;
 
           requestAnimationFrame(inertiaScroll);
         }
