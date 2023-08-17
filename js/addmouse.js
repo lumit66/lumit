@@ -3,18 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var mouseOffsetY = 0;
   var isDragging = false; // 是否正在拖动元素
 
-  var oBox = document.querySelector('.aplayer-body'); // 需要拖动的元素
   var container = document.body; // 容器元素
-
-  var startX = 0; // 拖动开始时的鼠标位置
-  var startY = 0;
-  var moveX = 0; // 拖动过程中的鼠标位置
-  var moveY = 0;
-  var deltaX = 0; // 鼠标在x轴和y轴上的位移
-  var deltaY = 0;
-  var lastMoveTime = 0; // 上次移动的时间
-  var velocityX = 0; // x轴和y轴上的速度
-  var velocityY = 0;
 
   container.addEventListener('mousedown', handleStart); // 监听鼠标按下事件
   container.addEventListener('touchstart', handleStart); // 监听触摸开始事件
@@ -26,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function () {
   function handleStart(e) {
     e.preventDefault();
 
+    var oBox = e.target.closest('.aplayer-body'); // 需要拖动的元素
+
+    if (!oBox) return; // 如果没有找到目标元素，则退出函数
+
+    var startX, startY;
+
     if (e.type === 'mousedown') {
       startX = e.clientX;
       startY = e.clientY;
@@ -34,41 +29,40 @@ document.addEventListener('DOMContentLoaded', function () {
       startY = e.touches[0].clientY;
     }
 
-    if (e.target === oBox) {
-      isDragging = true; // 开始拖动元素
-      mouseOffsetX = startX - oBox.offsetLeft;
-      mouseOffsetY = startY - oBox.offsetTop;
-    }
+    isDragging = true; // 开始拖动元素
+    mouseOffsetX = startX - oBox.offsetLeft;
+    mouseOffsetY = startY - oBox.offsetTop;
   }
 
   function handleMove(e) {
     e.preventDefault();
 
-    if (isDragging) {
-      if (e.type === 'mousemove') {
-        moveX = e.clientX;
-        moveY = e.clientY;
-      } else if (e.type === 'touchmove') {
-        moveX = e.touches[0].clientX;
-        moveY = e.touches[0].clientY;
-      }
+    if (!isDragging) return; // 如果没有正在拖动元素，则退出函数
 
-      deltaX = moveX - startX;
-      deltaY = moveY - startY;
+    var moveX, moveY;
 
-      var now = Date.now();
-      var deltaTime = now - lastMoveTime;
-      lastMoveTime = now;
-
-      velocityX = deltaTime > 0 ? deltaX / deltaTime : 0;
-      velocityY = deltaTime > 0 ? deltaY / deltaTime : 0;
-
-      startX = moveX;
-      startY = moveY;
-
-      oBox.style.transform = `translate3d(${moveX - mouseOffsetX}px, ${moveY - mouseOffsetY}px, 0)`;
-      // 更新元素位置
+    if (e.type === 'mousemove') {
+      moveX = e.clientX;
+      moveY = e.clientY;
+    } else if (e.type === 'touchmove') {
+      moveX = e.touches[0].clientX;
+      moveY = e.touches[0].clientY;
     }
+
+    var deltaX = moveX - startX;
+    var deltaY = moveY - startY;
+
+    var now = Date.now();
+    var deltaTime = now - lastMoveTime;
+    var velocityX = deltaTime > 0 ? deltaX / deltaTime : 0;
+    var velocityY = deltaTime > 0 ? deltaY / deltaTime : 0;
+
+    startX = moveX;
+    startY = moveY;
+
+    var oBox = document.querySelector('.aplayer-body'); // 需要拖动的元素
+    oBox.style.transform = `translate3d(${moveX - mouseOffsetX}px, ${moveY - mouseOffsetY}px, 0)`;
+    // 更新元素位置
   }
 
   function handleEnd() {
@@ -91,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var newX = moveX + distanceX;
         var newY = moveY + distanceY;
 
+        var oBox = document.querySelector('.aplayer-body'); // 需要拖动的元素
         oBox.style.transform = `translate3d(${newX - mouseOffsetX}px, ${newY - mouseOffsetY}px, 0)`;
 
         requestAnimationFrame(inertiaScroll);
