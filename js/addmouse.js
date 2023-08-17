@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function () {
       startX = moveX;
       startY = moveY;
 
+      // 使用 translate3d 更新元素位置
       oBox.style.transform = `translate3d(${moveX - mouseOffsetX}px, ${moveY - mouseOffsetY}px, 0)`;
-      // 更新元素位置
     }
   }
 
@@ -91,15 +91,16 @@ document.addEventListener('DOMContentLoaded', function () {
         var newX = moveX + distanceX;
         var newY = moveY + distanceY;
 
+        // 使用 translate3d 更新元素位置
         oBox.style.transform = `translate3d(${newX - mouseOffsetX}px, ${newY - mouseOffsetY}px, 0)`;
 
         requestAnimationFrame(inertiaScroll);
-        // 使用requestAnimationFrame方法在下一帧中执行惯性滚动
+        // 使用 requestAnimationFrame 方法在下一帧中执行惯性滚动
       }
     }
 
     requestAnimationFrame(inertiaScroll);
-    // 使用requestAnimationFrame方法开始惯性滚动
+    // 使用 requestAnimationFrame 方法开始惯性滚动
   }
 
   // 缓动函数
