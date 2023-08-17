@@ -498,7 +498,7 @@
 	bottom: 0;
 	height: 33%;
 	/*background: linear-gradient(180deg,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.8));*/
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff",endColorstr="#ccffffff",GradientType=0)
+	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff",endColorstr="#ccffffff",GradientType=0)*/
 }
 
 .aplayer .aplayer-lrc p {
