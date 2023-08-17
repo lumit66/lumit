@@ -106,7 +106,6 @@
 	margin: 0;
 	z-index: 98;
 	pointer-events: none;
-	/*text-shadow: -1px -1px 0 #fff*/
 }
 
 .aplayer.aplayer-fixed .aplayer-lrc:after,.aplayer.aplayer-fixed .aplayer-lrc:before {
