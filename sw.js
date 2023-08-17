@@ -37,11 +37,22 @@
     self.addEventListener('activate', event => event.waitUntil(clients.claim()))
 
     // noinspection JSFileReferences
-    let cacheRules = {
+    let getSpareUrls = srcUrl => {
+    if (srcUrl.startsWith('https://cdn.jsdelivr.net/npm')) {
+        return {
+            timeout: 3000,
+            list: [
+                srcUrl,
+                `https://npm.elemecdn.com${new URL(srcUrl).pathname}`
+            ]
+        }
+    }
+}
+let cacheRules = {
 simple: {
 clean: true,
 search: false,
-match: url => url.host === 'kmar.top' && url.pathname.match(/\.(woff2|woff|ttf|cur)$/)}
+match: url => url.host === 'lumit.top' && url.pathname.match(/\.(woff2|woff|ttf|cur)$/)}
 }
 
 let getRaceUrls = srcUrl => {
@@ -78,7 +89,6 @@ const fetchFile = (request, banCache) => {
             return it.response
         })
     }
-const getSpareUrls = _ => {}
 
     // 检查请求是否成功
     // noinspection JSUnusedLocalSymbols
