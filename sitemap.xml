@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lumit.top/posts/1.html</loc>
+    <loc>https://lumit.top/posts/2.html</loc>
     
     <lastmod>2023-09-20</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://lumit.top/posts/2.html</loc>
+    <loc>https://lumit.top/posts/1.html</loc>
     
     <lastmod>2023-09-20</lastmod>
     
@@ -54,6 +54,20 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://lumit.top/tags/mysql%E5%9F%BA%E7%A1%80%E7%AF%87/</loc>
+    <lastmod>2023-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://lumit.top/tags/mysql%E8%BF%9B%E9%98%B6%E7%AF%87/</loc>
+    <lastmod>2023-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   

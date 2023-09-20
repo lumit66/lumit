@@ -1,7 +1,9 @@
-https://lumit.top/posts/1.html
-https://lumit.top/posts/3.html
 https://lumit.top/posts/2.html
+https://lumit.top/posts/3.html
+https://lumit.top/posts/1.html
 https://lumit.top/categories/index.html
 https://lumit.top/tags/index.html
 https://lumit.top/
+https://lumit.top/tags/mysql%E5%9F%BA%E7%A1%80%E7%AF%87/
+https://lumit.top/tags/mysql%E8%BF%9B%E9%98%B6%E7%AF%87/
 https://lumit.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
